@@ -1,7 +1,8 @@
 angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
 .config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$locationProvider',
     function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $locationProvider) {
-    
+
+    $locationProvider.html5Mode(false).hashPrefix("");
     // configuring the lazyLoad angularjs files
     $ocLazyLoadProvider.config({
         // debug: true,
@@ -12,11 +13,18 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                     "bower_components/angular-ui-select/dist/select.min.js",
                     "bower_components/angular-ui-select/dist/select.min.css"
                 ]
+            },
+            {
+                name: "angularUtils.directives.dirPagination",
+                files: [
+                    "bower_components/angularUtils-pagination/dirPagination.js",
+                    "bower_components/angularUtils-pagination/dirPagination.tpl/html"
+                ]
             }
         ]
     });
     
-    $urlRouterProvider.otherwise("/")
+    $urlRouterProvider.otherwise("/");
     $stateProvider
         .state('dashboard', {
             url: '/',
@@ -64,16 +72,34 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                 }
             }
         })
-        .state('store', {
-            url: '/store',
-            templateUrl: 'modules/store/store.template.html',
+
+        // from store/store directory
+        .state('stores', {
+            url: '/stores',
+            templateUrl: 'modules/store/store/store.template.html',
             controller: "storeCtrl",
             resolve: {
                 store: function ($ocLazyLoad) {
                     return $ocLazyLoad.load(
                         {
                             name: 'storeModule',
-                            files: ['modules/store/store.module.js']
+                            files: ['modules/store/store/store.module.js']
+                        }
+                    )
+                }
+            }
+        })
+        // from store/add directory
+        .state('add-store', {
+            url: '/add-store',
+            templateUrl: 'modules/store/add/add.store.template.html',
+            controller: "addStoreCtrl",
+            resolve: {
+                addStore: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load(
+                        {
+                            name: 'addStoreModule',
+                            files: ['modules/store/add/add.store.module.js']
                         }
                     )
                 }
@@ -81,5 +107,5 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
         })
 }])
 .controller("mainCtrl", ["$scope", function ($scope) {
-    console.log("main controller!!")
+
 }]);

@@ -1,0 +1,29 @@
+/* store module */
+angular.module("storeModule", ["angularUtils.directives.dirPagination"])
+    .controller("storeCtrl", ["$scope", function ($scope) {
+        $scope.currentPage = 1;
+        $scope.pageSize = 10;
+        $scope.drinks = [];
+
+        var drinks = [
+            'coke',
+            'melange',
+            'chai latte',
+            'almdudler',
+            'beer',
+            'vodka',
+            'coconut milk',
+            'orange juice',
+            'wine',
+            'whisky',
+            'sex on the beach'
+        ];
+        for (var i = 1; i <= 20; i++) {
+            var drink = drinks[Math.floor(Math.random() * drinks.length)];
+            $scope.drinks.push('drink ' + i + ': ' + drink);
+        }
+
+        $scope.pageChangeHandler = function(num) {
+            console.log('drinks page changed to ' + num);
+        };
+    }]);
