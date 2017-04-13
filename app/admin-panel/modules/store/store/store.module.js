@@ -26,4 +26,13 @@ angular.module("storeModule", ["angularUtils.directives.dirPagination", "storeSe
         $scope.pageChangeHandler = function(num) {
             console.log('drinks page changed to ' + num);
         };
+
+        $scope.toggleSidebar = function () {
+            if($("#sidebar-affix").css("right") == "0px") {
+                $("#sidebar-affix").animate({"right": '-1000', 'display': 'none'}, 500);
+            } else
+            {
+                $("#sidebar-affix").animate({"right": '0', 'display': 'block'}, 500);
+            }
+        }
     }]);

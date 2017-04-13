@@ -62,7 +62,16 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
     
     $urlRouterProvider.otherwise("/");
     $stateProvider
-        .state('dashboard', {
+        .state('header', {
+            url: '',
+            templateUrl: 'modules/header/header.template.html',
+            resolve: {
+                checkLogin: function ($location) {
+                    console.log($location);
+                }
+            }
+        })
+        .state('header.dashboard', {
             url: '/',
             templateUrl: 'modules/dashboard/dashboard.template.html',
             controller: "dashBoardCtrl",
@@ -110,7 +119,7 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
         })
 
         // from store/store directory
-        .state('stores', {
+        .state('header.stores', {
             url: '/stores',
             templateUrl: 'modules/store/store/store.template.html',
             controller: "storeCtrl",
@@ -126,7 +135,7 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
             }
         })
         // from store/add directory
-        .state('add-store', {
+        .state('header.add-store', {
             url: '/store/add',
             templateUrl: 'modules/store/add/add.store.template.html',
             controller: "addStoreCtrl",
@@ -141,7 +150,7 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                 }
             }
         })
-        .state('update-store', {
+        .state('header.update-store', {
             url: '/store/update/:storeId',
             templateUrl: 'modules/store/update/update.store.template.html',
             controller: "updateStoreCtrl",
@@ -158,7 +167,7 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
         })
 
         // from deal/deal directory
-        .state('deals', {
+        .state('header.deals', {
             url: '/deals',
             templateUrl: 'modules/deals/deal/deal.template.html',
             controller: "dealCtrl",

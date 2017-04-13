@@ -1,0 +1,9 @@
+#page-wrapper {
+    margin-top: 90px;
+}
+.alert {
+    min-height: 120px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
