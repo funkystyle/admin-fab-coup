@@ -37,6 +37,13 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                 ]
             },
             {
+                name: "toastr",
+                files: [
+                    "bower_components/angular-toastr/dist/angular-toastr.tpls.min.js",
+                    "bower_components/angular-toastr/dist/angular-toastr.min.css"
+                ]
+            },
+            {
                 name: "constantModule",
                 files: ['modules/constant.module.js']
             },

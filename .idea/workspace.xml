@@ -2,47 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d27012d-dfd7-4d41-8b84-546330a34666" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-ui-select/dist/select.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-ui-select/dist/select.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-ui-select/dist/select.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-ui-select/dist/select.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-ui-select/dist/select.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-ui-select/dist/select.min.js.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular.min.js.gzip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/.bower.json" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/README.md" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/bower.json" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/index.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/package.json" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap-csp.css" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap-csp.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap.min.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-bootstrap/ui-bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-ui-router/release/angular-ui-router.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular-ui-router/release/angular-ui-router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/LICENSE.md" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/README.md" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular-csp.css" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular-csp.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/index.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/jquery/dist/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/jquery/dist/jquery.slim.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/jquery/dist/jquery.slim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/bower_components/oclazyload/dist/ocLazyLoad.js" afterPath="$PROJECT_DIR$/app/admin-panel/bower_components/oclazyload/dist/ocLazyLoad.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/index.html" afterPath="$PROJECT_DIR$/app/admin-panel/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/modules/app.js" afterPath="$PROJECT_DIR$/app/admin-panel/modules/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/modules/assets/css/style.css" afterPath="$PROJECT_DIR$/app/admin-panel/modules/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.css" afterPath="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.module.js" afterPath="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.template.html" afterPath="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/modules/store/store/store.module.js" afterPath="$PROJECT_DIR$/app/admin-panel/modules/store/store/store.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin-panel/modules/store/store/store.template.html" afterPath="$PROJECT_DIR$/app/admin-panel/modules/store/store/store.template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,18 +23,28 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="131" column="22" lean-forward="false" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
+            <state relative-caret-position="528">
+              <caret line="42" column="72" lean-forward="false" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="162" column="15" lean-forward="false" selection-start-line="162" selection-start-column="15" selection-end-line="162" selection-end-column="15" />
+            <state relative-caret-position="644">
+              <caret line="170" column="26" lean-forward="false" selection-start-line="170" selection-start-column="26" selection-end-line="170" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.store.module.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="100" lean-forward="false" selection-start-line="19" selection-start-column="100" selection-end-line="19" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -174,16 +147,16 @@
         <option value="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.css" />
         <option value="$PROJECT_DIR$/app/admin-panel/bower_components/angular-ui-select/dist/select.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.module.js" />
         <option value="$PROJECT_DIR$/app/admin-panel/modules/store/update/update.store.css" />
         <option value="$PROJECT_DIR$/app/admin-panel/modules/store/update/update.store.module.js" />
         <option value="$PROJECT_DIR$/app/admin-panel/modules/store/update/update.store.template.html" />
         <option value="$PROJECT_DIR$/app/admin-panel/modules/store/delete/delete.store.module.js" />
-        <option value="$PROJECT_DIR$/app/admin-panel/modules/app.js" />
         <option value="$PROJECT_DIR$/app/admin-panel/modules/store/store/store.template.html" />
         <option value="$PROJECT_DIR$/app/admin-panel/index.html" />
         <option value="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.template.html" />
+        <option value="$PROJECT_DIR$/app/admin-panel/modules/app.js" />
         <option value="$PROJECT_DIR$/app/admin-panel/modules/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.module.js" />
       </list>
     </option>
   </component>
@@ -622,12 +595,12 @@
       <workItem from="1491972554060" duration="1192000" />
       <workItem from="1492003054729" duration="13003000" />
       <workItem from="1492062515086" duration="45000" />
-      <workItem from="1492071905026" duration="5570000" />
+      <workItem from="1492071905026" duration="6678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28790000" />
+    <option name="totallyTimeSpent" value="29898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -664,14 +637,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3344">
-          <caret line="152" column="58" lean-forward="true" selection-start-line="152" selection-start-column="58" selection-end-line="152" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -949,14 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="68" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/store/delete/delete.store.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1013,14 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="131" column="22" lean-forward="false" selection-start-line="131" selection-start-column="22" selection-end-line="131" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/store/store/store.template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-346">
@@ -1031,10 +980,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin-panel/bower_components/angular-toastr/dist/angular-toastr.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="42" column="72" lean-forward="false" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="162" column="15" lean-forward="false" selection-start-line="162" selection-start-column="15" selection-end-line="162" selection-end-column="15" />
+        <state relative-caret-position="644">
+          <caret line="170" column="26" lean-forward="false" selection-start-line="170" selection-start-column="26" selection-end-line="170" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin-panel/modules/store/add/add.store.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="100" lean-forward="false" selection-start-line="19" selection-start-column="100" selection-end-line="19" selection-end-column="100" />
           <folding />
         </state>
       </provider>

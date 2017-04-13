@@ -1,5 +1,5 @@
-angular.module("addStoreModule", ["ui.select", "ngSanitize", "ui.bootstrap"])
-    .controller("addStoreCtrl", ["$scope", "$timeout", function ($scope, $timeout) {
+angular.module("addStoreModule", ["ui.select", "ngSanitize", "ui.bootstrap", "toastr"])
+    .controller("addStoreCtrl", ["$scope", "$timeout", "toastr", function ($scope, $timeout, toastr) {
         $scope.store = {
             created_date: new Date(),
             modified_date: new Date()
@@ -14,6 +14,10 @@ angular.module("addStoreModule", ["ui.select", "ngSanitize", "ui.bootstrap"])
         };
         $scope.clear = function() {
             $scope.store.relatedStore = undefined;
+        };
+
+        $scope.addStore = function (store) {
+            toastr.success('We do have the Kapua suite available.', 'Turtle Bay Resort', {timeOut: 5000})
         };
 
         $scopesomeGroupFn = function (item){

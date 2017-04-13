@@ -167,3 +167,6 @@ thead tr th {
     left: 225px;
     text-align: center;
 }
+#toast-container .toast {
+    opacity: 1 !important;
+}
