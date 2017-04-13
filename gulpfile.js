@@ -46,12 +46,12 @@ gulp.task('minify_html', function() {
 // watching static files 
 gulp.task('watch', function(){
 	// watching the css files and then minifying 
-  	gulp.watch('app/admin-panel/modules/*/*.css').on("change", browserSync.reload);
+  	gulp.watch('app/admin-panel/modules/*/*/*.css').on("change", browserSync.reload);
 
   	// watching js files and then minifying
-  	gulp.watch(["app/admin-panel/modules/*/*.js"]).on("change", browserSync.reload)
+  	gulp.watch(["app/admin-panel/modules/*/*/*.js"]).on("change", browserSync.reload)
   	// Other watchers for live realoding the application
-    gulp.watch(['app/admin-panel/modules/*/*.html']).on("change", browserSync.reload);
+    gulp.watch(['app/admin-panel/modules/*/*/*.html']).on("change", browserSync.reload);
 });
 
 gulp.task("default", ['browser-sync', 'watch']);

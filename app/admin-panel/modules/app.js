@@ -1,7 +1,8 @@
 angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
-.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$locationProvider',
-    function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $locationProvider) {
+.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$locationProvider', '$sceProvider',
+    function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $locationProvider, $sceProvider) {
 
+    $sceProvider.enabled(false);
     $locationProvider.html5Mode(false).hashPrefix("");
     // configuring the lazyLoad angularjs files
     $ocLazyLoadProvider.config({
@@ -10,8 +11,16 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
             {
                 name: "ui.select",
                 files: [
-                    "bower_components/angular-ui-select/dist/select.min.js",
-                    "bower_components/angular-ui-select/dist/select.min.css"
+                    "bower_components/angular-ui-select/dist/select.js",
+                    "bower_components/angular-ui-select/dist/select.css"
+                ]
+            },
+            {
+                name: "ui.bootstrap",
+                files: [
+                    "bower_components/angular-bootstrap/ui-bootstrap.js",
+                    "bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+                    "bower_components/angular-bootstrap/ui-bootstrap-csp.css"
                 ]
             },
             {
@@ -20,6 +29,26 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                     "bower_components/angularUtils-pagination/dirPagination.js",
                     "bower_components/angularUtils-pagination/dirPagination.tpl/html"
                 ]
+            },
+            {
+                name: "ngSanitize",
+                files: [
+                    "bower_components/angular-sanitize/angular-sanitize.min.js",
+                ]
+            },
+            {
+                name: "constantModule",
+                files: ['modules/constant.module.js']
+            },
+
+            // Services
+            {
+                name: "storeServiceModule",
+                files: ['modules/store/store.service.module.js']
+            },
+            {
+                name: "dealServiceModule",
+                files: ['modules/deal/deal.service.module.js']
             }
         ]
     });
@@ -91,7 +120,7 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
         })
         // from store/add directory
         .state('add-store', {
-            url: '/add-store',
+            url: '/store/add',
             templateUrl: 'modules/store/add/add.store.template.html',
             controller: "addStoreCtrl",
             resolve: {
@@ -100,6 +129,38 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                         {
                             name: 'addStoreModule',
                             files: ['modules/store/add/add.store.module.js']
+                        }
+                    )
+                }
+            }
+        })
+        .state('update-store', {
+            url: '/store/update/:storeId',
+            templateUrl: 'modules/store/update/update.store.template.html',
+            controller: "updateStoreCtrl",
+            resolve: {
+                updateStore: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load(
+                        {
+                            name: 'updateStoreModule',
+                            files: ['modules/store/update/update.store.module.js']
+                        }
+                    )
+                }
+            }
+        })
+
+        // from deal/deal directory
+        .state('deals', {
+            url: '/deals',
+            templateUrl: 'modules/deals/deal/deal.template.html',
+            controller: "dealCtrl",
+            resolve: {
+                deal: function ($ocLazyLoad) {
+                    return $ocLazyLoad.load(
+                        {
+                            name: 'dealModule',
+                            files: ['modules/deals/deal/deal.module.js']
                         }
                     )
                 }

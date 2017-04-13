@@ -393,7 +393,7 @@
                 _$log: $log,
 
                 /**
-                 * Returns the files cache used by the loaders to store the files currently loading
+                 * Returns the files cache used by the loaders to deal the files currently loading
                  * @returns {*}
                  */
                 _getFilesCache: function getFilesCache() {
@@ -590,7 +590,7 @@
                             }
                         } else if (angular.isObject(requireEntry)) {
                             if (requireEntry.hasOwnProperty('name') && requireEntry['name']) {
-                                // The dependency doesn't exist in the module cache and is a new configuration, so store and push it.
+                                // The dependency doesn't exist in the module cache and is a new configuration, so deal and push it.
                                 self.setModuleConfig(requireEntry);
                                 moduleCache.push(requireEntry['name']);
                             }
@@ -789,7 +789,7 @@
             terminal: true,
             priority: 1000,
             compile: function compile(element, attrs) {
-                // we store the content and remove it before compilation
+                // we deal the content and remove it before compilation
                 var content = element[0].innerHTML;
                 element.html('');
 

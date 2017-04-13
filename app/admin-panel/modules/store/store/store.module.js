@@ -1,6 +1,6 @@
 /* store module */
-angular.module("storeModule", ["angularUtils.directives.dirPagination"])
-    .controller("storeCtrl", ["$scope", function ($scope) {
+angular.module("storeModule", ["angularUtils.directives.dirPagination", "storeServiceModule"])
+    .controller("storeCtrl", ["$scope", "storeFactory", function ($scope, storeFactory) {
         $scope.currentPage = 1;
         $scope.pageSize = 10;
         $scope.drinks = [];

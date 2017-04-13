@@ -5,7 +5,19 @@
     }
     /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
 }
-
+.panel-default .close {
+    color: #FFFFFF;
+}
+.full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+}
+.partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+}
 #wrapper {
     padding-left: 0;    
 }
@@ -145,4 +157,13 @@ thead tr th {
 
 .navbar-brand {
     padding: 5px 15px;
+}
+.submit {
+    position: fixed;
+    bottom: 1px;
+    z-index: 99999;
+    text-transform: uppercase;
+    width: 86%;
+    left: 225px;
+    text-align: center;
 }

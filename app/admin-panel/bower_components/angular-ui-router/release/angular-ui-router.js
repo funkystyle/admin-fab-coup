@@ -2413,7 +2413,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
   }
 
   function registerState(state) {
-    // Wrap a new object around the state so we can store our private details easily.
+    // Wrap a new object around the state so we can deal our private details easily.
     state = inherit(state, {
       self: state,
       resolve: state.resolve || {},
