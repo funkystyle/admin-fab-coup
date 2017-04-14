@@ -1,0 +1,1 @@
+angular.module("dealServiceModule",["constantModule"]).factory("dealFactory",["$http","$q","URL",function(e,t,o){return{get:function(){var n=t.defer();return e({url:o.store,method:"GET"}).then(function(e){n.resolve(e.data)},function(e){console.log(e.data),n.reject(e.data)}),n.promise}}}]);

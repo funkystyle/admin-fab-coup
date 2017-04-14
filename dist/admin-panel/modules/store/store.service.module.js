@@ -1,0 +1,1 @@
+angular.module("storeServiceModule",["constantModule"]).factory("storeFactory",["$http","$q","URL",function(t,e,o){return{get:function(){var r=e.defer();return t({url:o.store,method:"GET"}).then(function(t){r.resolve(t.data)},function(t){console.log(t.data),r.reject(t.data)}),r.promise}}}]);

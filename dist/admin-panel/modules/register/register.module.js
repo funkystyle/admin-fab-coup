@@ -1,0 +1,1 @@
+angular.module("registerModule",["ui.select"]).controller("registerCtrl",["$scope",function(e){console.log("registerctrl")}]);
