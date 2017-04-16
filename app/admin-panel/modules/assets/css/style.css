@@ -5,33 +5,58 @@
     }
     /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
 }
+
+.uib-datepicker .uib-title {
+    margin-top: -6px;
+}
+
+.uib-datepicker .btn-default {
+    color: #333;
+    background-color: #ffffff;
+    border-color: #f5f5f5;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.uib-datepicker button.active {
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #000000;
+}
+
 .ui-select-bootstrap .btn-default {
     background-color: #FFFFFF;
     border: 1px solid #dddddd;
     color: #333 !important;
 }
+
 .panel-default .close {
     color: #FFFFFF;
 }
+
 .full button span {
     background-color: limegreen;
     border-radius: 32px;
     color: black;
 }
+
 .partially button span {
     background-color: orange;
     border-radius: 32px;
     color: black;
 }
+
 #wrapper {
-    padding-left: 0;    
+    padding-left: 0;
 }
+
 thead tr th {
     line-height: 40px !important;
     background: rgb(247, 247, 247);
 }
+
 #page-wrapper {
-    width: 100%;        
+    width: 100%;
     padding: 0;
     background-color: #fff;
 }
@@ -40,11 +65,11 @@ thead tr th {
     #wrapper {
         padding-left: 225px;
     }
-
     #page-wrapper {
         padding: 22px 10px;
     }
 }
+
 
 /* Top Navigation */
 
@@ -81,13 +106,14 @@ thead tr th {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: #fff;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 .top-nav>.open>.dropdown-menu>li>a {
     white-space: normal;
 }
+
 
 /* Side Navigation */
 
@@ -100,7 +126,7 @@ thead tr th {
         margin-left: -225px;
         border: none;
         border-radius: 0;
-        border-top: 1px rgba(0,0,0,.5) solid;
+        border-top: 1px rgba(0, 0, 0, .5) solid;
         overflow-y: auto;
         background-color: #222;
         /*background-color: #5A6B7D;*/
@@ -108,12 +134,10 @@ thead tr th {
         overflow-x: hidden;
         padding-bottom: 40px;
     }
-
     .side-nav>li>a {
         width: 225px;
-        border-bottom: 1px rgba(0,0,0,.3) solid;
+        border-bottom: 1px rgba(0, 0, 0, .3) solid;
     }
-
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
@@ -123,7 +147,7 @@ thead tr th {
 
 .side-nav>li>ul {
     padding: 0;
-    border-bottom: 1px rgba(0,0,0,.3) solid;
+    border-bottom: 1px rgba(0, 0, 0, .3) solid;
 }
 
 .side-nav>li>ul>li>a {
@@ -131,38 +155,41 @@ thead tr th {
     padding: 10px 15px 10px 38px;
     text-decoration: none;
     /*color: #999;*/
-    color: #fff;    
+    color: #fff;
 }
 
 .side-nav>li>ul>li>a:hover {
     color: #fff;
 }
+
 .navbar {
     height: 90px;
 }
-.navbar .nav > li > a > .label {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  position: absolute;
-  top: 14px;
-  right: 6px;
-  font-size: 10px;
-  font-weight: normal;
-  min-width: 15px;
-  min-height: 15px;
-  line-height: 1.0em;
-  text-align: center;
-  padding: 2px;
+
+.navbar .nav>li>a>.label {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 14px;
+    right: 6px;
+    font-size: 10px;
+    font-weight: normal;
+    min-width: 15px;
+    min-height: 15px;
+    line-height: 1.0em;
+    text-align: center;
+    padding: 2px;
 }
 
-.navbar .nav > li > a:hover > .label {
-  top: 10px;
+.navbar .nav>li>a:hover>.label {
+    top: 10px;
 }
 
 .navbar-brand {
     padding: 5px 15px;
 }
+
 .submit {
     position: fixed;
     bottom: 1px;
@@ -172,9 +199,11 @@ thead tr th {
     left: 225px;
     text-align: center;
 }
+
 #toast-container .toast {
     opacity: 1 !important;
 }
+
 .delete-popup {
     position: fixed;
     right: -1000px;
@@ -189,6 +218,7 @@ thead tr th {
     -moz-box-shadow: -23px 7px 83px -46px #242424;
     -o-box-shadow: -23px 7px 83px -46px #242424;
 }
+
 .delete-close {
     position: absolute;
     top: 10px;

@@ -70,11 +70,18 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                 .state('header', {
                     url: '',
                     templateUrl: 'modules/header/header.template.html',
+                    controller: "headerCtrl",
                     resolve: {
                         redirect: function($location) {
                             if ($location.path() == undefined || $location.path() == null || $location.path() == '') {
                                 $location.path('/');
                             }
+                        },
+                        header: function($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'headerModule',
+                                files: ['modules/header/header.module.js']
+                            })
                         }
                     }
                 })
@@ -206,13 +213,13 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
             // from coupons/add directory
             .state('header.coupon', {
                     url: '/coupons',
-                    templateUrl: 'modules/coupons/coupon.template.html',
-                    controller: "CouponCtrl",
+                    templateUrl: 'modules/coupons/coupon/coupon.template.html',
+                    controller: "couponCtrl",
                     resolve: {
                         coupon: function($ocLazyLoad) {
                             return $ocLazyLoad.load({
                                 name: 'couponModule',
-                                files: ['modules/coupons/coupon.module.js']
+                                files: ['modules/coupons/coupon/coupon.module.js']
                             })
                         }
                     }
@@ -239,6 +246,48 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                             return $ocLazyLoad.load({
                                 name: 'updateCouponModule',
                                 files: ['modules/coupons/update/update.coupon.module.js']
+                            })
+                        }
+                    }
+                })
+
+
+            // ==== settings ======
+            .state('header.settings', {
+                    url: '/settings',
+                    templateUrl: 'modules/settings/settings/settings.template.html',
+                    controller: "settingsCtrl",
+                    resolve: {
+                        settings: function($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'settingsModule',
+                                files: ['modules/settings/settings/settings.module.js']
+                            })
+                        }
+                    }
+                })
+                .state('header.settings.profile', {
+                    url: '/profile',
+                    templateUrl: 'modules/settings/profile/profile.template.html',
+                    controller: "profileCtrl",
+                    resolve: {
+                        settings: function($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'profileModule',
+                                files: ['modules/settings/profile/profile.module.js']
+                            })
+                        }
+                    }
+                })
+                .state('header.settings.change-password', {
+                    url: '/change-password',
+                    templateUrl: 'modules/settings/change-password/change-password.template.html',
+                    controller: "profileCtrl",
+                    resolve: {
+                        settings: function($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'profileModule',
+                                files: ['modules/settings/profile/profile.module.js']
                             })
                         }
                     }

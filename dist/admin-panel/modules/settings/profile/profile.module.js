@@ -1,0 +1,1 @@
+angular.module("profileModule",["constantModule"]).controller("profileCtrl",["$scope",function(o){console.log("settings profile controller!")}]);

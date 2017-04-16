@@ -1,0 +1,1 @@
+angular.module("headerModule",[]).controller("headerCtrl",["$scope","$state",function(e,o){console.log("header module",o),e.state=o}]);
