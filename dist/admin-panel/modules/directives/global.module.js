@@ -1,0 +1,1 @@
+angular.module("Directives",[]).directive("onlyDigits",function(){return{restrict:"A",require:"?ngModel",link:function(e,r,i,n){n.$parsers.push(function(e){if(void 0==e)return"";var r=e.replace(/[^0-9]/g,"");return r!==e&&(n.$setViewValue(r),n.$render()),r})}}});

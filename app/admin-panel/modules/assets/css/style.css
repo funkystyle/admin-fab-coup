@@ -230,3 +230,74 @@ thead tr th {
     height: 40px;
     cursor: pointer;
 }
+
+/* for styled checkboxes and radio buttons */
+
+.checkbox label,
+.radio label {
+    padding-left: 0 !important;
+    min-height: 25px !important;
+    line-height: 20px;
+}
+
+.checkbox label:after,
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: 3px;
+    width: 1.2em;
+    height: 1.2em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .7em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"]+.cr>.cr-icon,
+.radio label input[type="radio"]+.cr>.cr-icon {
+    transform: scale(2) rotateZ(-10deg);
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked+.cr>.cr-icon,
+.radio label input[type="radio"]:checked+.cr>.cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled+.cr,
+.radio label input[type="radio"]:disabled+.cr {
+    opacity: .3;
+}
+
+
+/* enf of styled checkboxes and radio buttons */

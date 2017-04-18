@@ -1,1 +1,1 @@
-angular.module("loginModule",[]).controller("loginCtrl",["$scope",function(l){console.log("loginctrl")}]);
+angular.module("loginModule",["Directives"]).controller("loginCtrl",["$scope","$http",function(o,n){o.login={},o.register={user_level:["user"],status:"inactive"},o.loginNow=function(o){n({url:mainURL+URL.login,method:"POST",data:o}).then(function(o){console.log(o.data)},function(o){console.log("error")})}}]);
