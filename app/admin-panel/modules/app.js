@@ -117,6 +117,19 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                         }
                     }
                 })
+                .state('forgot_password', {
+                    url: '/forgot-password',
+                    templateUrl: 'modules/forgot.password/forgot.password.template.html',
+                    controller: "forgotPasswordCtrl",
+                    resolve: {
+                        forgotPassword: function($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'forgotPasswordModule',
+                                files: ['modules/forgot.password/forgot.password.module.js']
+                            })
+                        }
+                    }
+                })
                 // register
                 .state('register', {
                     url: '/register',
@@ -287,13 +300,13 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                 })
                 .state('header.settings.change-password', {
                     url: '/change-password',
-                    templateUrl: 'modules/settings/change-password/change-password.template.html',
-                    controller: "profileCtrl",
+                    templateUrl: 'modules/settings/change.password/change.password.template.html',
+                    controller: "changePasswordCtrl",
                     resolve: {
                         settings: function($ocLazyLoad) {
                             return $ocLazyLoad.load({
                                 name: 'profileModule',
-                                files: ['modules/settings/profile/profile.module.js']
+                                files: ['modules/settings/change.password/change.password.module.js']
                             })
                         }
                     }
