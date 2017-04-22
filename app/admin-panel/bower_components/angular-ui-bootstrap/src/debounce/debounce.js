@@ -1,6 +1,6 @@
 angular.module('ui.bootstrap.debounce', [])
 /**
- * A helper, internal service that debounces a function
+ * A helper, internal services that debounces a function
  */
   .factory('$$debounce', ['$timeout', function($timeout) {
     return function(callback, debounceTime) {

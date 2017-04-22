@@ -1891,7 +1891,7 @@ function reloadWithDebugInfo() {
  * @name angular.getTestability
  * @module ng
  * @description
- * Get the testability service for the instance of Angular on the given
+ * Get the testability services for the instance of Angular on the given
  * element.
  * @param {DOMElement} element DOM element which is the root of angular application.
  */
@@ -2140,7 +2140,7 @@ function setupModuleLoader(window) {
      * // Create a new module
      * var myModule = angular.module('myModule', []);
      *
-     * // register a new service
+     * // register a new services
      * myModule.value('appName', 'MyCoolApp');
      *
      * // configure existing services inside initialization blocks.
@@ -2229,9 +2229,9 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#provider
            * @module ng
-           * @param {string} name service name
+           * @param {string} name services name
            * @param {Function} providerType Construction function for creating new instance of the
-           *                                service.
+           *                                services.
            * @description
            * See {@link auto.$provide#provider $provide.provider()}.
            */
@@ -2241,8 +2241,8 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#factory
            * @module ng
-           * @param {string} name service name
-           * @param {Function} providerFunction Function for creating new instance of the service.
+           * @param {string} name services name
+           * @param {Function} providerFunction Function for creating new instance of the services.
            * @description
            * See {@link auto.$provide#factory $provide.factory()}.
            */
@@ -2252,10 +2252,10 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#service
            * @module ng
-           * @param {string} name service name
+           * @param {string} name services name
            * @param {Function} constructor A constructor function that will be instantiated.
            * @description
-           * See {@link auto.$provide#service $provide.service()}.
+           * See {@link auto.$provide#service $provide.services()}.
            */
           service: invokeLaterAndSetModuleName('$provide', 'service'),
 
@@ -2263,7 +2263,7 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#value
            * @module ng
-           * @param {string} name service name
+           * @param {string} name services name
            * @param {*} object Service instance object.
            * @description
            * See {@link auto.$provide#value $provide.value()}.
@@ -2286,9 +2286,9 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#decorator
            * @module ng
-           * @param {string} name The name of the service to decorate.
-           * @param {Function} decorFn This function will be invoked when the service needs to be
-           *                           instantiated and should return the decorated service instance.
+           * @param {string} name The name of the services to decorate.
+           * @param {Function} decorFn This function will be invoked when the services needs to be
+           *                           instantiated and should return the decorated services instance.
            * @description
            * See {@link auto.$provide#decorator $provide.decorator()}.
            */
@@ -2307,7 +2307,7 @@ function setupModuleLoader(window) {
            *
            *
            * Defines an animation hook that can be later used with
-           * {@link $animate $animate} service and directives that use this service.
+           * {@link $animate $animate} services and directives that use this services.
            *
            * ```js
            * module.animation('.animation-name', function($inject1, $inject2) {
@@ -2388,7 +2388,7 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#config
            * @module ng
-           * @param {Function} configFn Execute this function on module load. Useful for service
+           * @param {Function} configFn Execute this function on module load. Useful for services
            *    configuration.
            * @description
            * Use this method to register work which needs to be performed on module loading.
@@ -3862,7 +3862,7 @@ JQLite.prototype.bind = JQLite.prototype.on;
 JQLite.prototype.unbind = JQLite.prototype.off;
 
 
-// Provider for private $$jqLite service
+// Provider for private $$jqLite services
 /** @this */
 function $$jqLiteProvider() {
   this.$get = function $$jqLite() {
@@ -4094,7 +4094,7 @@ function annotate(fn, strictDi, name) {
 ///////////////////////////////////////
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $injector
  *
  * @description
@@ -4151,7 +4151,7 @@ function annotate(fn, strictDi, name) {
  * @name $injector#get
  *
  * @description
- * Return an instance of the service.
+ * Return an instance of the services.
  *
  * @param {string} name The name of the instance to retrieve.
  * @param {string=} caller An optional string to provide the origin of the function call for error messages.
@@ -4178,10 +4178,10 @@ function annotate(fn, strictDi, name) {
  * @name $injector#has
  *
  * @description
- * Allows the user to query if the particular service exists.
+ * Allows the user to query if the particular services exists.
  *
- * @param {string} name Name of the service to query.
- * @returns {boolean} `true` if injector has given service.
+ * @param {string} name Name of the services to query.
+ * @returns {boolean} `true` if injector has given services.
  */
 
 /**
@@ -4203,7 +4203,7 @@ function annotate(fn, strictDi, name) {
  * @name $injector#annotate
  *
  * @description
- * Returns an array of service names which the function is requesting for injection. This API is
+ * Returns an array of services names which the function is requesting for injection. This API is
  * used by the injector to determine which services need to be injected into the function when the
  * function is invoked. There are three ways in which the function can be annotated with the needed
  * dependencies.
@@ -4274,7 +4274,7 @@ function annotate(fn, strictDi, name) {
  *    ).toEqual(['$compile', '$rootScope']);
  * ```
  *
- * @param {Function|Array.<string|Function>} fn Function for which dependent service names need to
+ * @param {Function|Array.<string|Function>} fn Function for which dependent services names need to
  * be retrieved as described above.
  *
  * @param {boolean=} [strictDi=false] Disallow argument name annotation inference.
@@ -4285,43 +4285,43 @@ function annotate(fn, strictDi, name) {
 
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $provide
  *
  * @description
  *
- * The {@link auto.$provide $provide} service has a number of methods for registering components
+ * The {@link auto.$provide $provide} services has a number of methods for registering components
  * with the {@link auto.$injector $injector}. Many of these functions are also exposed on
  * {@link angular.Module}.
  *
- * An Angular **service** is a singleton object created by a **service factory**.  These **service
- * factories** are functions which, in turn, are created by a **service provider**.
- * The **service providers** are constructor functions. When instantiated they must contain a
- * property called `$get`, which holds the **service factory** function.
+ * An Angular **services** is a singleton object created by a **services factory**.  These **services
+ * factories** are functions which, in turn, are created by a **services provider**.
+ * The **services providers** are constructor functions. When instantiated they must contain a
+ * property called `$get`, which holds the **services factory** function.
  *
- * When you request a service, the {@link auto.$injector $injector} is responsible for finding the
- * correct **service provider**, instantiating it and then calling its `$get` **service factory**
- * function to get the instance of the **service**.
+ * When you request a services, the {@link auto.$injector $injector} is responsible for finding the
+ * correct **services provider**, instantiating it and then calling its `$get` **services factory**
+ * function to get the instance of the **services**.
  *
- * Often services have no configuration options and there is no need to add methods to the service
+ * Often services have no configuration options and there is no need to add methods to the services
  * provider.  The provider will be no more than a constructor function with a `$get` property. For
- * these cases the {@link auto.$provide $provide} service has additional helper methods to register
+ * these cases the {@link auto.$provide $provide} services has additional helper methods to register
  * services without specifying a provider.
  *
- * * {@link auto.$provide#provider provider(name, provider)} - registers a **service provider** with the
+ * * {@link auto.$provide#provider provider(name, provider)} - registers a **services provider** with the
  *     {@link auto.$injector $injector}
  * * {@link auto.$provide#constant constant(name, obj)} - registers a value/object that can be accessed by
  *     providers and services.
  * * {@link auto.$provide#value value(name, obj)} - registers a value/object that can only be accessed by
  *     services, not providers.
- * * {@link auto.$provide#factory factory(name, fn)} - registers a service **factory function**
- *     that will be wrapped in a **service provider** object, whose `$get` property will contain the
+ * * {@link auto.$provide#factory factory(name, fn)} - registers a services **factory function**
+ *     that will be wrapped in a **services provider** object, whose `$get` property will contain the
  *     given factory function.
- * * {@link auto.$provide#service service(name, Fn)} - registers a **constructor function**
- *     that will be wrapped in a **service provider** object, whose `$get` property will instantiate
+ * * {@link auto.$provide#service services(name, Fn)} - registers a **constructor function**
+ *     that will be wrapped in a **services provider** object, whose `$get` property will instantiate
  *      a new object using the given constructor function.
  * * {@link auto.$provide#decorator decorator(name, decorFn)} - registers a **decorator function** that
- *      will be able to modify or replace the implementation of another service.
+ *      will be able to modify or replace the implementation of another services.
  *
  * See the individual methods for more information and examples.
  */
@@ -4333,17 +4333,17 @@ function annotate(fn, strictDi, name) {
  *
  * Register a **provider function** with the {@link auto.$injector $injector}. Provider functions
  * are constructor functions, whose instances are responsible for "providing" a factory for a
- * service.
+ * services.
  *
- * Service provider names start with the name of the service they provide followed by `Provider`.
- * For example, the {@link ng.$log $log} service has a provider called
+ * Service provider names start with the name of the services they provide followed by `Provider`.
+ * For example, the {@link ng.$log $log} services has a provider called
  * {@link ng.$logProvider $logProvider}.
  *
  * Service provider objects can have additional methods which allow configuration of the provider
- * and its service. Importantly, you can configure what kind of service is created by the `$get`
- * method, or how that service will act. For example, the {@link ng.$logProvider $logProvider} has a
+ * and its services. Importantly, you can configure what kind of services is created by the `$get`
+ * method, or how that services will act. For example, the {@link ng.$logProvider $logProvider} has a
  * method {@link ng.$logProvider#debugEnabled debugEnabled}
- * which lets you specify whether the {@link ng.$log $log} service will log debug messages to the
+ * which lets you specify whether the {@link ng.$log $log} services will log debug messages to the
  * console or not.
  *
  * @param {string} name The name of the instance. NOTE: the provider will be available under `name +
@@ -4359,7 +4359,7 @@ function annotate(fn, strictDi, name) {
 
  * @example
  *
- * The following example shows how to create a simple event tracking service and register it using
+ * The following example shows how to create a simple event tracking services and register it using
  * {@link auto.$provide#provider $provide.provider()}.
  *
  * ```js
@@ -4372,7 +4372,7 @@ function annotate(fn, strictDi, name) {
  *      trackingUrl = url;
  *    };
  *
- *    // The service factory function
+ *    // The services factory function
  *    this.$get = ['$http', function($http) {
  *      var trackedEvents = {};
  *      return {
@@ -4427,11 +4427,11 @@ function annotate(fn, strictDi, name) {
  * @name $provide#factory
  * @description
  *
- * Register a **service factory**, which will be called to return the service instance.
- * This is short for registering a service where its provider consists of only a `$get` property,
- * which is the given service factory function.
+ * Register a **services factory**, which will be called to return the services instance.
+ * This is short for registering a services where its provider consists of only a `$get` property,
+ * which is the given services factory function.
  * You should use {@link auto.$provide#factory $provide.factory(getFn)} if you do not need to
- * configure your service in a provider.
+ * configure your services in a provider.
  *
  * @param {string} name The name of the instance.
  * @param {Function|Array.<string|Function>} $getFn The injectable $getFn for the instance creation.
@@ -4439,7 +4439,7 @@ function annotate(fn, strictDi, name) {
  * @returns {Object} registered provider instance
  *
  * @example
- * Here is an example of registering a service
+ * Here is an example of registering a services
  * ```js
  *   $provide.factory('ping', ['$http', function($http) {
  *     return function ping() {
@@ -4447,7 +4447,7 @@ function annotate(fn, strictDi, name) {
  *     };
  *   }]);
  * ```
- * You would then inject and use this service like this:
+ * You would then inject and use this services like this:
  * ```js
  *   someModule.controller('Ctrl', ['ping', function(ping) {
  *     ping();
@@ -4461,10 +4461,10 @@ function annotate(fn, strictDi, name) {
  * @name $provide#service
  * @description
  *
- * Register a **service constructor**, which will be invoked with `new` to create the service
+ * Register a **services constructor**, which will be invoked with `new` to create the services
  * instance.
- * This is short for registering a service where its provider's `$get` property is a factory
- * function that returns an instance instantiated by the injector from the service constructor
+ * This is short for registering a services where its provider's `$get` property is a factory
+ * function that returns an instance instantiated by the injector from the services constructor
  * function.
  *
  * Internally it looks a bit like this:
@@ -4478,7 +4478,7 @@ function annotate(fn, strictDi, name) {
  * ```
  *
  *
- * You should use {@link auto.$provide#service $provide.service(class)} if you define your service
+ * You should use {@link auto.$provide#service $provide.services(class)} if you define your services
  * as a type/class.
  *
  * @param {string} name The name of the instance.
@@ -4487,8 +4487,8 @@ function annotate(fn, strictDi, name) {
  * @returns {Object} registered provider instance
  *
  * @example
- * Here is an example of registering a service using
- * {@link auto.$provide#service $provide.service(class)}.
+ * Here is an example of registering a services using
+ * {@link auto.$provide#service $provide.services(class)}.
  * ```js
  *   var Ping = function($http) {
  *     this.$http = $http;
@@ -4499,9 +4499,9 @@ function annotate(fn, strictDi, name) {
  *   Ping.prototype.send = function() {
  *     return this.$http.get('/ping');
  *   };
- *   $provide.service('ping', Ping);
+ *   $provide.services('ping', Ping);
  * ```
- * You would then inject and use this service like this:
+ * You would then inject and use this services like this:
  * ```js
  *   someModule.controller('Ctrl', ['ping', function(ping) {
  *     ping.send();
@@ -4515,10 +4515,10 @@ function annotate(fn, strictDi, name) {
  * @name $provide#value
  * @description
  *
- * Register a **value service** with the {@link auto.$injector $injector}, such as a string, a
- * number, an array, an object or a function. This is short for registering a service where its
+ * Register a **value services** with the {@link auto.$injector $injector}, such as a string, a
+ * number, an array, an object or a function. This is short for registering a services where its
  * provider's `$get` property is a factory function that takes no arguments and returns the **value
- * service**. That also means it is not possible to inject other services into a value service.
+ * services**. That also means it is not possible to inject other services into a value services.
  *
  * Value services are similar to constant services, except that they cannot be injected into a
  * module configuration function (see {@link angular.Module#config}) but they can be overridden by
@@ -4547,7 +4547,7 @@ function annotate(fn, strictDi, name) {
  * @name $provide#constant
  * @description
  *
- * Register a **constant service** with the {@link auto.$injector $injector}, such as a string,
+ * Register a **constant services** with the {@link auto.$injector $injector}, such as a string,
  * a number, an array, an object or a function. Like the {@link auto.$provide#value value}, it is not
  * possible to inject other services into a constant.
  *
@@ -4579,23 +4579,23 @@ function annotate(fn, strictDi, name) {
  * @description
  *
  * Register a **decorator function** with the {@link auto.$injector $injector}. A decorator function
- * intercepts the creation of a service, allowing it to override or modify the behavior of the
- * service. The return value of the decorator function may be the original service, or a new service
- * that replaces (or wraps and delegates to) the original service.
+ * intercepts the creation of a services, allowing it to override or modify the behavior of the
+ * services. The return value of the decorator function may be the original services, or a new services
+ * that replaces (or wraps and delegates to) the original services.
  *
  * You can find out more about using decorators in the {@link guide/decorators} guide.
  *
- * @param {string} name The name of the service to decorate.
- * @param {Function|Array.<string|Function>} decorator This function will be invoked when the service needs to be
- *    provided and should return the decorated service instance. The function is called using
+ * @param {string} name The name of the services to decorate.
+ * @param {Function|Array.<string|Function>} decorator This function will be invoked when the services needs to be
+ *    provided and should return the decorated services instance. The function is called using
  *    the {@link auto.$injector#invoke injector.invoke} method and is therefore fully injectable.
  *    Local injection arguments:
  *
- *    * `$delegate` - The original service instance, which can be replaced, monkey patched, configured,
+ *    * `$delegate` - The original services instance, which can be replaced, monkey patched, configured,
  *      decorated or delegated to.
  *
  * @example
- * Here we decorate the {@link ng.$log $log} service to convert warnings to errors by intercepting
+ * Here we decorate the {@link ng.$log $log} services to convert warnings to errors by intercepting
  * calls to {@link ng.$log#error $log.warn()}.
  * ```js
  *   $provide.decorator('$log', ['$delegate', function($delegate) {
@@ -4802,7 +4802,7 @@ function createInjector(modulesToLoad, strictDi) {
         var key = $inject[i];
         if (typeof key !== 'string') {
           throw $injectorMinErr('itkn',
-                  'Incorrect injection token! Expected service name as string, got {0}', key);
+                  'Incorrect injection token! Expected services name as string, got {0}', key);
         }
         args.push(locals && locals.hasOwnProperty(key) ? locals[key] :
                                                          getService(key, serviceName));
@@ -5422,9 +5422,9 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
     }
 
     /**
-     * @ngdoc service
+     * @ngdoc services
      * @name $animate
-     * @description The $animate service exposes a series of DOM utility methods that provide support
+     * @description The $animate services exposes a series of DOM utility methods that provide support
      * for animation hooks. The default behavior is the application of DOM operations, however,
      * when an animation is detected (and animations are enabled), $animate will do the heavy lifting
      * to ensure that animation runs with the triggered DOM operation.
@@ -5435,7 +5435,7 @@ var $AnimateProvider = ['$provide', /** @this */ function($provide) {
      * their DOM-related operations (enter, leave and move). Other directives such as `ngClass`,
      * `ngShow`, `ngHide` and `ngMessages` also provide support for animations.
      *
-     * It is recommended that the`$animate` service is always used when executing DOM-related procedures within directives.
+     * It is recommended that the`$animate` services is always used when executing DOM-related procedures within directives.
      *
      * To learn more about enabling animation support, click here to visit the
      * {@link ngAnimate ngAnimate module page}.
@@ -5991,14 +5991,14 @@ var $$AnimateRunnerFactoryProvider = /** @this */ function() {
 /* exported $CoreAnimateCssProvider */
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $animateCss
  * @kind object
  * @this
  *
  * @description
  * This is the core version of `$animateCss`. By default, only when the `ngAnimate` is included,
- * then the `$animateCss` service will actually perform animations.
+ * then the `$animateCss` services will actually perform animations.
  *
  * Click here {@link ngAnimate.$animateCss to read the documentation for $animateCss}.
  */
@@ -6008,7 +6008,7 @@ var $CoreAnimateCssProvider = function() {
     return function(element, initialOptions) {
       // all of the animation functions should create
       // a copy of the options data, however, if a
-      // parent service has already created a copy then
+      // parent services has already created a copy then
       // we should stick to using that
       var options = initialOptions || {};
       if (!options.$$prepared) {
@@ -6065,7 +6065,7 @@ var $CoreAnimateCssProvider = function() {
 /* global stripHash: true */
 
 /**
- * ! This is a private undocumented service !
+ * ! This is a private undocumented services !
  *
  * @name $browser
  * @requires $log
@@ -6076,14 +6076,14 @@ var $CoreAnimateCssProvider = function() {
  * - abstract away all the browser specific features and inconsistencies
  *
  * For tests we provide {@link ngMock.$browser mock implementation} of the `$browser`
- * service, which can be used for convenient testing of the application without the interaction with
+ * services, which can be used for convenient testing of the application without the interaction with
  * the real browser apis.
  */
 /**
  * @param {object} window The global window object.
  * @param {object} document jQuery wrapped document.
  * @param {object} $log window.console or an object with the same interface.
- * @param {object} $sniffer $sniffer service
+ * @param {object} $sniffer $sniffer services
  */
 function Browser(window, document, $log, $sniffer) {
   var self = this,
@@ -6174,8 +6174,8 @@ function Browser(window, document, $log, $sniffer) {
    * location.href/location.replace is used.
    * Returns its own instance to allow chaining
    *
-   * NOTE: this api is intended for use only by the $location service. Please use the
-   * {@link ng.$location $location service} to change url.
+   * NOTE: this api is intended for use only by the $location services. Please use the
+   * {@link ng.$location $location services} to change url.
    *
    * @param {string} url New url (when used as setter)
    * @param {boolean=} replace Should new url replace current history record?
@@ -6308,8 +6308,8 @@ function Browser(window, document, $log, $sniffer) {
    *
    * The listener gets called with new url as parameter.
    *
-   * NOTE: this api is intended for use only by the $location service. Please use the
-   * {@link ng.$location $location service} to monitor url changes in angular apps.
+   * NOTE: this api is intended for use only by the $location services. Please use the
+   * {@link ng.$location $location services} to monitor url changes in angular apps.
    *
    * @param {function(string)} listener Listener function to be called when url changes.
    * @return {function(string)} Returns the registered listener fn - handy if the fn is anonymous.
@@ -6779,14 +6779,14 @@ function $CacheFactoryProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $templateCache
  * @this
  *
  * @description
  * The first time a template is used, it is loaded in the template cache for quick retrieval. You
  * can load templates directly into the cache in a `script` tag, or by consuming the
- * `$templateCache` service directly.
+ * `$templateCache` services directly.
  *
  * Adding via the `script` tag:
  *
@@ -6800,7 +6800,7 @@ function $CacheFactoryProvider() {
  * the document, but it must be a descendent of the {@link ng.$rootElement $rootElement} (IE,
  * element with ng-app attribute), otherwise the template will be ignored.
  *
- * Adding via the `$templateCache` service:
+ * Adding via the `$templateCache` services:
  *
  * ```js
  * var myApp = angular.module('myApp', []);
@@ -6816,7 +6816,7 @@ function $CacheFactoryProvider() {
  * });
  * ```
  *
- * or get it via the `$templateCache` service:
+ * or get it via the `$templateCache` services:
  * ```js
  * $templateCache.get('templateId.html')
  * ```
@@ -10147,7 +10147,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
                   $watch(interpolateFn, function interpolateFnWatchAction(newValue, oldValue) {
                     //special case for class attribute addition + removal
                     //so that class changes can tap into the animation
-                    //hooks provided by the $animate service. Be sure to
+                    //hooks provided by the $animate services. Be sure to
                     //skip animations when the first digest occurs (when
                     //both the new and the old values are the same) since
                     //the CSS classes are the non-interpolated values
@@ -10556,7 +10556,7 @@ function identifierForController(controller, ident) {
  * @this
  *
  * @description
- * The {@link ng.$controller $controller service} is used by Angular to create new
+ * The {@link ng.$controller $controller services} is used by Angular to create new
  * controllers.
  *
  * This provider allows controller registration via the
@@ -10610,7 +10610,7 @@ function $ControllerProvider() {
   this.$get = ['$injector', '$window', function($injector, $window) {
 
     /**
-     * @ngdoc service
+     * @ngdoc services
      * @name $controller
      * @requires $injector
      *
@@ -10631,10 +10631,10 @@ function $ControllerProvider() {
      * @return {Object} Instance of given controller.
      *
      * @description
-     * `$controller` service is responsible for instantiating controllers.
+     * `$controller` services is responsible for instantiating controllers.
      *
      * It's just a simple call to {@link auto.$injector $injector}, but extracted into
-     * a service, so that one can override this service with [BC version](https://gist.github.com/1649788).
+     * a services, so that one can override this services with [BC version](https://gist.github.com/1649788).
      */
     return function $controller(expression, locals, later, ident) {
       // PRIVATE API:
@@ -10788,17 +10788,17 @@ function $$IsDocumentHiddenProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $exceptionHandler
  * @requires ng.$log
  * @this
  *
  * @description
- * Any uncaught exception in angular expressions is delegated to this service.
+ * Any uncaught exception in angular expressions is delegated to this services.
  * The default implementation simply delegates to `$log.error` which logs it into
  * the browser console.
  *
- * In unit tests, if `angular-mocks.js` is loaded, this service is overridden by
+ * In unit tests, if `angular-mocks.js` is loaded, this services is overridden by
  * {@link ngMock.$exceptionHandler mock $exceptionHandler} which aids in testing.
  *
  * ## Example:
@@ -10883,7 +10883,7 @@ function serializeValue(v) {
 /** @this */
 function $HttpParamSerializerProvider() {
   /**
-   * @ngdoc service
+   * @ngdoc services
    * @name $httpParamSerializer
    * @description
    *
@@ -10921,7 +10921,7 @@ function $HttpParamSerializerProvider() {
 /** @this */
 function $HttpParamSerializerJQLikeProvider() {
   /**
-   * @ngdoc service
+   * @ngdoc services
    * @name $httpParamSerializerJQLike
    *
    * @description
@@ -11109,7 +11109,7 @@ function isSuccess(status) {
  * @this
  *
  * @description
- * Use `$httpProvider` to change the default behavior of the {@link ng.$http $http} service.
+ * Use `$httpProvider` to change the default behavior of the {@link ng.$http $http} services.
  * */
 function $HttpProvider() {
   /**
@@ -11145,7 +11145,7 @@ function $HttpProvider() {
    *
    * - **`defaults.jsonpCallbackParam`** - `{string}` - the name of the query parameter that passes the name of the
    * callback in a JSONP request. The value of this parameter will be replaced with the expression generated by the
-   * {@link $jsonpCallbacks} service. Defaults to `'callback'`.
+   * {@link $jsonpCallbacks} services. Defaults to `'callback'`.
    *
    **/
   var defaults = this.defaults = {
@@ -11181,7 +11181,7 @@ function $HttpProvider() {
    * @name $httpProvider#useApplyAsync
    * @description
    *
-   * Configure $http service to combine processing of multiple http responses received at around
+   * Configure $http services to combine processing of multiple http responses received at around
    * the same time via {@link ng.$rootScope.Scope#$applyAsync $rootScope.$applyAsync}. This can result in
    * significant performance improvement for bigger applications that make many HTTP requests
    * concurrently (common during application bootstrap).
@@ -11208,10 +11208,10 @@ function $HttpProvider() {
    * @name $httpProvider#interceptors
    * @description
    *
-   * Array containing service factories for all synchronous or asynchronous {@link ng.$http $http}
+   * Array containing services factories for all synchronous or asynchronous {@link ng.$http $http}
    * pre-processing of request or postprocessing of responses.
    *
-   * These service factories are ordered by request, i.e. they are applied in the same order as the
+   * These services factories are ordered by request, i.e. they are applied in the same order as the
    * array, on request, but reverse order, on response.
    *
    * {@link ng.$http#interceptors Interceptors detailed info}
@@ -11990,7 +11990,7 @@ function $HttpProvider() {
      * </div>
      *
      * If you would like to customise where and how the callbacks are stored then try overriding
-     * or decorating the {@link $jsonpCallbacks} service.
+     * or decorating the {@link $jsonpCallbacks} services.
      *
      * @param {string|TrustedObject} url Absolute or relative URL of the resource that is being requested;
      *                                   or an object created by a call to `$sce.trustAsResourceUrl(url)`.
@@ -12267,14 +12267,14 @@ function $HttpProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $xhrFactory
  * @this
  *
  * @description
  * Factory function used to create XMLHttpRequest objects.
  *
- * Replace or decorate this service to create your own custom XMLHttpRequest objects.
+ * Replace or decorate this services to create your own custom XMLHttpRequest objects.
  *
  * ```
  * angular.module('myApp', [])
@@ -12297,7 +12297,7 @@ function $xhrFactoryProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $httpBackend
  * @requires $jsonpCallbacks
  * @requires $document
@@ -12305,10 +12305,10 @@ function $xhrFactoryProvider() {
  * @this
  *
  * @description
- * HTTP backend used by the {@link ng.$http service} that delegates to
+ * HTTP backend used by the {@link ng.$http services} that delegates to
  * XMLHttpRequest object or JSONP and deals with browser incompatibilities.
  *
- * You should never need to use this service directly, instead use the higher-level abstractions:
+ * You should never need to use this services directly, instead use the higher-level abstractions:
  * {@link ng.$http $http} or {@link ngResource.$resource $resource}.
  *
  * During testing this implementation is swapped with {@link ngMock.$httpBackend mock
@@ -13067,12 +13067,12 @@ function $IntervalProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $jsonpCallbacks
  * @requires $window
  * @description
- * This service handles the lifecycle of callbacks to handle JSONP requests.
- * Override this service if you wish to customise where the callbacks are stored and
+ * This services handles the lifecycle of callbacks to handle JSONP requests.
+ * Override this services if you wish to customise where the callbacks are stored and
  * how they vary compared to the requested url.
  */
 var $jsonpCallbacksProvider = /** @this */ function() {
@@ -13148,11 +13148,11 @@ var $jsonpCallbacksProvider = /** @this */ function() {
 };
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $locale
  *
  * @description
- * $locale service provides localization rules for various Angular components. As of right now the
+ * $locale services provides localization rules for various Angular components. As of right now the
  * only public api is:
  *
  * * `id` – `{string}` – locale id formatted as `languageId-countryId` (e.g. `en-us`)
@@ -13251,7 +13251,7 @@ function serverBase(url) {
 
 /**
  * LocationHtml5Url represents a URL
- * This object is exposed as $location service when HTML5 mode is enabled and supported
+ * This object is exposed as $location services when HTML5 mode is enabled and supported
  *
  * @constructor
  * @param {string} appBase application base URL
@@ -13330,7 +13330,7 @@ function LocationHtml5Url(appBase, appBaseNoFile, basePrefix) {
 
 /**
  * LocationHashbangUrl represents URL
- * This object is exposed as $location service when developer doesn't opt into html5 mode.
+ * This object is exposed as $location services when developer doesn't opt into html5 mode.
  * It also serves as the base class for html5 mode fallback on legacy browsers.
  *
  * @constructor
@@ -13442,7 +13442,7 @@ function LocationHashbangUrl(appBase, appBaseNoFile, hashPrefix) {
 
 /**
  * LocationHashbangUrl represents URL
- * This object is exposed as $location service when html5 history api is enabled but the browser
+ * This object is exposed as $location services when html5 history api is enabled but the browser
  * does not support it.
  *
  * @constructor
@@ -13842,18 +13842,18 @@ function locationGetterSetter(property, preprocess) {
 
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $location
  *
  * @requires $rootElement
  *
  * @description
- * The $location service parses the URL in the browser address bar (based on the
+ * The $location services parses the URL in the browser address bar (based on the
  * [window.location](https://developer.mozilla.org/en/window.location)) and makes the URL
  * available to your application. Changes to the URL in the address bar are reflected into
- * $location service and changes to $location are reflected into the browser address bar.
+ * $location services and changes to $location are reflected into the browser address bar.
  *
- * **The $location service:**
+ * **The $location services:**
  *
  * - Exposes the current URL in the browser address bar, so you can
  *   - Watch and observe the URL.
@@ -15968,7 +15968,7 @@ function getValueOf(value) {
 ///////////////////////////////////
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $parse
  * @kind function
  *
@@ -16015,7 +16015,7 @@ function getValueOf(value) {
  *
  * @description
  * `$parseProvider` can be used for configuring the default behavior of the {@link ng.$parse $parse}
- *  service.
+ *  services.
  */
 function $ParseProvider() {
   var cache = createMap();
@@ -16032,7 +16032,7 @@ function $ParseProvider() {
    * @name $parseProvider#addLiteral
    * @description
    *
-   * Configure $parse service to add literal values that will be present as literal at expressions.
+   * Configure $parse services to add literal values that will be present as literal at expressions.
    *
    * @param {string} literalName Token for the literal value. The literal name value must be a valid literal name.
    * @param {*} literalValue Value for this literal. All literal values must be primitives or `undefined`.
@@ -16290,12 +16290,12 @@ function $ParseProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $q
  * @requires $rootScope
  *
  * @description
- * A service that helps you run functions asynchronously, and use their return values (or exceptions)
+ * A services that helps you run functions asynchronously, and use their return values (or exceptions)
  * when they are done processing.
  *
  * This is a [Promises/A+](https://promisesaplus.com/)-compliant implementation of promises/deferred
@@ -17023,7 +17023,7 @@ function $$RAFProvider() { //rAF
  * @name $rootScopeProvider
  * @description
  *
- * Provider for the $rootScope service.
+ * Provider for the $rootScope services.
  */
 
 /**
@@ -17049,7 +17049,7 @@ function $$RAFProvider() { //rAF
 
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $rootScope
  * @this
  *
@@ -17154,12 +17154,12 @@ function $RootScopeProvider() {
      * details.
      *
      *
-     * @param {Object.<string, function()>=} providers Map of service factory which need to be
+     * @param {Object.<string, function()>=} providers Map of services factory which need to be
      *                                       provided for the current scope. Defaults to {@link ng}.
      * @param {Object.<string, *>=} instanceCache Provides pre-instantiated services which should
      *                              append/override services provided by `providers`. This is handy
      *                              when unit-testing and having the need to override a default
-     *                              service.
+     *                              services.
      * @returns {Object} Newly created scope.
      *
      */
@@ -17989,7 +17989,7 @@ function $RootScopeProvider() {
        *     `expression` execution.
        *
        * Any exceptions from the execution of the expression are forwarded to the
-       * {@link ng.$exceptionHandler $exceptionHandler} service.
+       * {@link ng.$exceptionHandler $exceptionHandler} services.
        *
        * __Note:__ if this function is called outside of a `$digest` cycle, a new `$digest` cycle
        * will be scheduled. However, it is encouraged to always call code that changes the model
@@ -18053,7 +18053,7 @@ function $RootScopeProvider() {
        * 1. The {@link guide/expression expression} is executed using the
        *    {@link ng.$rootScope.Scope#$eval $eval()} method.
        * 2. Any exceptions from the execution of the expression are forwarded to the
-       *    {@link ng.$exceptionHandler $exceptionHandler} service.
+       *    {@link ng.$exceptionHandler $exceptionHandler} services.
        * 3. The {@link ng.$rootScope.Scope#$watch watch} listeners are fired immediately after the
        *    expression was executed using the {@link ng.$rootScope.Scope#$digest $digest()} method.
        *
@@ -18185,7 +18185,7 @@ function $RootScopeProvider() {
        * cancels it.
        *
        * Any exception emitted from the {@link ng.$rootScope.Scope#$on listeners} will be passed
-       * onto the {@link ng.$exceptionHandler $exceptionHandler} service.
+       * onto the {@link ng.$exceptionHandler $exceptionHandler} services.
        *
        * @param {string} name Event name to emit.
        * @param {...*} args Optional one or more arguments which will be passed onto the event listeners.
@@ -18257,7 +18257,7 @@ function $RootScopeProvider() {
        * scope and calls all registered listeners along the way. The event cannot be canceled.
        *
        * Any exception emitted from the {@link ng.$rootScope.Scope#$on listeners} will be passed
-       * onto the {@link ng.$exceptionHandler $exceptionHandler} service.
+       * onto the {@link ng.$exceptionHandler $exceptionHandler} services.
        *
        * @param {string} name Event name to broadcast.
        * @param {...*} args Optional one or more arguments which will be passed onto the event listeners.
@@ -18386,14 +18386,14 @@ function $RootScopeProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $rootElement
  *
  * @description
  * The root element of Angular application. This is either the element where {@link
  * ng.directive:ngApp ngApp} was declared or the element passed into
  * {@link angular.bootstrap}. The element represents the root element of application. It is also the
- * location where the application's {@link auto.$injector $injector} service gets
+ * location where the application's {@link auto.$injector $injector} services gets
  * published, and can be retrieved using `$rootElement.injector()`.
  */
 
@@ -18403,7 +18403,7 @@ function $RootScopeProvider() {
 /**
  * @this
  * @description
- * Private service to sanitize uris for links and images. Used by $compile and $sanitize.
+ * Private services to sanitize uris for links and images. Used by $compile and $sanitize.
  */
 function $$SanitizeUriProvider() {
   var aHrefSanitizationWhitelist = /^\s*(https?|ftp|mailto|tel|file):/,
@@ -18545,22 +18545,22 @@ function adjustMatchers(matchers) {
 
 
 /**
- * @ngdoc service
+ * @ngdoc services
  * @name $sceDelegate
  * @kind function
  *
  * @description
  *
- * `$sceDelegate` is a service that is used by the `$sce` service to provide {@link ng.$sce Strict
+ * `$sceDelegate` is a services that is used by the `$sce` services to provide {@link ng.$sce Strict
  * Contextual Escaping (SCE)} services to AngularJS.
  *
  * Typically, you would configure or override the {@link ng.$sceDelegate $sceDelegate} instead of
- * the `$sce` service to customize the way Strict Contextual Escaping works in AngularJS.  This is
+ * the `$sce` services to customize the way Strict Contextual Escaping works in AngularJS.  This is
  * because, while the `$sce` provides numerous shorthand methods, etc., you really only need to
  * override 3 core functions (`trustAs`, `getTrusted` and `valueOf`) to replace the way things
  * work because `$sce` delegates to `$sceDelegate` for these operations.
  *
- * Refer {@link ng.$sceDelegateProvider $sceDelegateProvider} to configure this service.
+ * Refer {@link ng.$sceDelegateProvider $sceDelegateProvider} to configure this services.
  *
  * The default instance of `$sceDelegate` should work out of the box with little pain.  While you
  * can override it completely to change the behavior of `$sce`, the common case would
@@ -18579,12 +18579,12 @@ function adjustMatchers(matchers) {
  * @description
  *
  * The `$sceDelegateProvider` provider allows developers to configure the {@link ng.$sceDelegate
- * $sceDelegate} service.  This allows one to get/set the whitelists and blacklists used to ensure
+ * $sceDelegate} services.  This allows one to get/set the whitelists and blacklists used to ensure
  * that the URLs used for sourcing Angular templates are safe.  Refer {@link
  * ng.$sceDelegateProvider#resourceUrlWhitelist $sceDelegateProvider.resourceUrlWhitelist} and
  * {@link ng.$sceDelegateProvider#resourceUrlBlacklist $sceDelegateProvider.resourceUrlBlacklist}
  *
- * For the general details about this service in Angular, read the main page for {@link ng.$sce
+ * For the general details about this services in Angular, read the main page for {@link ng.$sce
  * Strict Contextual Escaping (SCE)}.
  *
  * **Example**:  Consider the following case. <a name="example"></a>
@@ -18876,7 +18876,7 @@ function $SceDelegateProvider() {
  *
  * @description
  *
- * The $sceProvider provider allows developers to configure the {@link ng.$sce $sce} service.
+ * The $sceProvider provider allows developers to configure the {@link ng.$sce $sce} services.
  * -   enable/disable Strict Contextual Escaping (SCE) in a module
  * -   override the default implementation with a custom delegate
  *
@@ -19178,7 +19178,7 @@ function $SceProvider() {
    * The SCE delegate object must provide the following 3 methods:
    *
    * - trustAs(contextEnum, value)
-   *     This method is used to tell the SCE service that the provided value is OK to use in the
+   *     This method is used to tell the SCE services that the provided value is OK to use in the
    *     contexts specified by contextEnum.  It must return an object that will be accepted by
    *     getTrusted() for a compatible contextEnum and return this value.
    *
@@ -19551,7 +19551,7 @@ function $SceProvider() {
 /* exported $SnifferProvider */
 
 /**
- * !!! This is an undocumented "private" service !!!
+ * !!! This is an undocumented "private" services !!!
  *
  * @name $sniffer
  * @requires $window
@@ -19636,7 +19636,7 @@ var $templateRequestMinErr = minErr('$compile');
  * @this
  *
  * @description
- * Used to configure the options passed to the {@link $http} service when making a template request.
+ * Used to configure the options passed to the {@link $http} services when making a template request.
  *
  * For example, it can be used for specifying the "Accept" header that is sent to the server, when
  * requesting a template.
@@ -19649,7 +19649,7 @@ function $TemplateRequestProvider() {
    * @ngdoc method
    * @name $templateRequestProvider#httpOptions
    * @description
-   * The options to be passed to the {@link $http} service when making the request.
+   * The options to be passed to the {@link $http} services when making the request.
    * You can use this to override options such as the "Accept" header for template requests.
    *
    * The {@link $templateRequest} will set the `cache` and the `transformResponse` properties of the
@@ -19667,18 +19667,18 @@ function $TemplateRequestProvider() {
   };
 
   /**
-   * @ngdoc service
+   * @ngdoc services
    * @name $templateRequest
    *
    * @description
-   * The `$templateRequest` service runs security checks then downloads the provided template using
+   * The `$templateRequest` services runs security checks then downloads the provided template using
    * `$http` and, upon success, stores the contents inside of `$templateCache`. If the HTTP request
    * fails or the response data of the HTTP request is empty, a `$compile` error will be thrown (the
    * exception can be thwarted by setting the 2nd parameter of the function to true). Note that the
    * contents of `$templateCache` are trusted, so the call to `$sce.getTrustedUrl(tpl)` is omitted
    * when `tpl` is of type string and `$templateCache` has the matching entry.
    *
-   * If you want to pass custom options to the `$http` service, such as setting the Accept header you
+   * If you want to pass custom options to the `$http` services, such as setting the Accept header you
    * can configure this via {@link $templateRequestProvider#httpOptions}.
    *
    * @param {string|TrustedResourceUrl} tpl The HTTP request template URL
@@ -19754,7 +19754,7 @@ function $$TestabilityProvider() {
      * @name $testability
      *
      * @description
-     * The private $$testability service provides a collection of methods for use when debugging
+     * The private $$testability services provides a collection of methods for use when debugging
      * or by automated test and debugging tools.
      */
     var testability = {};
@@ -19870,13 +19870,13 @@ function $TimeoutProvider() {
 
 
      /**
-      * @ngdoc service
+      * @ngdoc services
       * @name $timeout
       *
       * @description
       * Angular's wrapper for `window.setTimeout`. The `fn` function is wrapped into a try/catch
       * block and delegates any exceptions to
-      * {@link ng.$exceptionHandler $exceptionHandler} service.
+      * {@link ng.$exceptionHandler $exceptionHandler} services.
       *
       * The return value of calling `$timeout` is a promise, which will be resolved when
       * the delay has passed and the timeout function, if provided, is executed.
@@ -19959,12 +19959,12 @@ function $TimeoutProvider() {
 }
 
 // NOTE:  The usage of window and document instead of $window and $document here is
-// deliberate.  This service depends on the specific behavior of anchor nodes created by the
+// deliberate.  This services depends on the specific behavior of anchor nodes created by the
 // browser (resolving and parsing URLs) that is unlikely to be provided by mock objects and
 // cause us to break tests.  In addition, when the browser resolves a URL for XHR, it
 // doesn't know about mocked locations and resolves URLs to the real document - which is
 // exactly the behavior needed here.  There is little value is mocking these out for this
-// service.
+// services.
 var urlParsingNode = window.document.createElement('a');
 var originUrl = urlResolve(window.location.href);
 
@@ -20106,7 +20106,7 @@ function $WindowProvider() {
  * @requires $document
  *
  * @description
- * This is a private service for reading cookies used by $http and ngCookies
+ * This is a private services for reading cookies used by $http and ngCookies
  *
  * @return {Object} a key/value map of the current cookies
  */
@@ -20195,15 +20195,15 @@ function $$CookieReaderProvider() {
  * ```js
  *   // Filter registration
  *   function MyModule($provide, $filterProvider) {
- *     // create a service to demonstrate injection (not always needed)
+ *     // create a services to demonstrate injection (not always needed)
  *     $provide.value('greet', function(name){
  *       return 'Hello ' + name + '!';
  *     });
  *
  *     // register a filter factory which uses the
- *     // greet service to demonstrate DI.
+ *     // greet services to demonstrate DI.
  *     $filterProvider.register('greet', function(greet){
- *       // return the filter function which uses the greet service
+ *       // return the filter function which uses the greet services
  *       // to generate salutation
  *       return function(text) {
  *         // filters need to be forgiving so check input validity
@@ -30282,7 +30282,7 @@ var ngPluralizeDirective = ['$locale', '$interpolate', '$log', function($locale,
 
         if (!countIsNaN && !(count in whens)) {
           // If an explicit number rule such as 1, 2, 3... is defined, just use it.
-          // Otherwise, check it against pluralization rules in $locale service.
+          // Otherwise, check it against pluralization rules in $locale services.
           count = $locale.pluralCat(count - offset);
         }
 

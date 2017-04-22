@@ -9,5 +9,8 @@ angular.module("constantModule", [])
         changePassword: "/api/1.0/auth/change-password",
         emailActivation: "/api/1.0/auth/email-activation",
 
-        store: "modules/JSON/store.json"
+        store: "modules/JSON/store.json",
+
+        // Persons
+        persons: "/api/1.0/persons"
     });

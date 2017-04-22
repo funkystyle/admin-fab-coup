@@ -6,7 +6,7 @@
 angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.stackedMap'])
 
 /**
- * The $tooltip service creates tooltip- and popover-like directives as well as
+ * The $tooltip services creates tooltip- and popover-like directives as well as
  * houses global options for them.
  */
 .provider('$uibTooltip', function() {
@@ -66,7 +66,7 @@ angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.s
   }
 
   /**
-   * Returns the actual instance of the $tooltip service.
+   * Returns the actual instance of the $tooltip services.
    * TODO support multiple triggers
    */
   this.$get = ['$window', '$compile', '$timeout', '$document', '$uibPosition', '$interpolate', '$rootScope', '$parse', '$$stackedMap', function($window, $compile, $timeout, $document, $position, $interpolate, $rootScope, $parse, $$stackedMap) {

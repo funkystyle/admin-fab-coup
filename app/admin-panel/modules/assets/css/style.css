@@ -9,7 +9,9 @@
 .uib-datepicker .uib-title {
     margin-top: -6px;
 }
-
+.pad-0 {
+    padding: 0;
+}
 .uib-datepicker .btn-default {
     color: #333;
     background-color: #ffffff;

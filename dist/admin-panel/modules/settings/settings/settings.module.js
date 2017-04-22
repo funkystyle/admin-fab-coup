@@ -1,1 +1,1 @@
-angular.module("settingsModule",["constantModule"]).controller("settingsCtrl",["$scope",function(o){console.log("settings controller!")}]);
+angular.module("settingsModule",["constantModule"]).controller("settingsCtrl",["$scope",function(t){}]);

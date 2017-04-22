@@ -1,6 +1,6 @@
 angular.module('ui.bootstrap.paging', [])
 /**
- * Helper internal service for generating common controller code between the
+ * Helper internal services for generating common controller code between the
  * pager and pagination components
  */
 .factory('uibPaging', ['$parse', function($parse) {

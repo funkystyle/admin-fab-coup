@@ -1,1 +1,1 @@
-angular.module("profileModule",["constantModule"]).controller("profileCtrl",["$scope",function(o){console.log("settings profile controller!")}]);
+angular.module("profileModule",["constantModule","ui.select"]).controller("profileCtrl",["$scope",function(e){e.userLevels=[{level:"submitter",text:"Submitter"},{level:"editor",text:"Editor"},{level:"admin",text:"Admin"}]}]);

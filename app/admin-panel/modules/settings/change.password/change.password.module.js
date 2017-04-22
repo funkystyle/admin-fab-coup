@@ -1,37 +1,25 @@
-angular.module("changePasswordModule", ["constantModule"])
-	.controller('changePasswordCtrl', function($scope, $http, mainURL, URL){
+angular.module("changePasswordModule", ["constantModule", "toastr"])
+	.controller('changePasswordCtrl', function($scope, $http, mainURL, URL, toastr){
 		$scope.change = {};
-		$scope.message = {};
 
-
+		// change password click function
 		$scope.changePassword = function (obj) {
-			$scope.message = {};
-
 			var object = {
 				user_id: "",
 				token: "",
 				new_password: obj.new_password
-			}
+			};
+
 			$http({
 				url: mainURL + URL.changePassword,
 				method: "POST",
 				data: obj
 			}).then(function (data) {
 				console.log(data);
-				$scope.message = {
-					error: fasle,
-					success: true,
-					text: data.data,
-					type: "Success!"
-				};
+				toastr.success(data.data, "Success!");
 			}, function (error) {
 				console.log(error);
-
-				$scope.message = {
-					error: true,
-					text: error.data.error,
-					type: "Error!"
-				};
+				toastr.error(error.data.error, "Error!");
 			});
 		}
 	});

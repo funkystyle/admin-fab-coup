@@ -28,7 +28,7 @@
             $controllerProvider: $controllerProvider,
             $compileProvider: $compileProvider,
             $filterProvider: $filterProvider,
-            $provide: $provide, // other things (constant, decorator, provider, factory, service)
+            $provide: $provide, // other things (constant, decorator, provider, factory, services)
             $injector: $injector,
             $animateProvider: $animateProvider
         },
@@ -401,7 +401,7 @@
                 },
 
                 /**
-                 * Let the service know that it should monitor angular.module because files are loading
+                 * Let the services know that it should monitor angular.module because files are loading
                  * @param watch boolean
                  */
                 toggleWatch: function toggleWatch(watch) {
@@ -1175,7 +1175,7 @@
                 return deferred.promise;
             };
 
-            // return the patched service
+            // return the patched services
             return $delegate;
         }]);
     }]);

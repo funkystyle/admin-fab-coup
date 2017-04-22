@@ -15,6 +15,13 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                         ]
                     },
                     {
+                        name: "cgBusy",
+                        files: [
+                            "bower_components/angular-busy/dist/angular-busy.min.js",
+                            "bower_components/angular-busy/dist/angular-busy.min.css"
+                        ]
+                    },
+                    {
                         name: "ui.bootstrap",
                         files: [
                             "bower_components/angular-bootstrap/ui-bootstrap.js",
@@ -67,6 +74,12 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                     {
                         name: "Directives",
                         files: ['modules/directives/global.module.js']
+                    },
+
+                    // Services
+                    {
+                        name: "personFactoryModule",
+                        files: ['modules/services/persons.service.js']
                     }
                 ]
             });
@@ -307,6 +320,52 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                             return $ocLazyLoad.load({
                                 name: 'profileModule',
                                 files: ['modules/settings/change.password/change.password.module.js']
+                            })
+                        }
+                    }
+                })
+
+                /* ===== users section */
+                .state('header.users', {
+                    url: '/users',
+                    templateUrl: 'modules/users/users/users.template.html',
+                    controller: "usersCtrl",
+                    resolve: {
+                        redirect: function($location) {
+                            if ($location.path() == '/users') {
+                                $location.path('/users/all');
+                            }
+                        },
+                        users: function($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'usersModule',
+                                files: ['modules/users/users/users.module.js']
+                            })
+                        }
+                    }
+                })
+                .state('header.users.all', {
+                    url: '/all',
+                    templateUrl: 'modules/users/all/all.template.html',
+                    controller: "allUsersCtrl",
+                    resolve: {
+                        allUsers: function($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'allUsersModule',
+                                files: ['modules/users/all/all.users.module.js']
+                            })
+                        }
+                    }
+                })
+                .state('header.users.add', {
+                    url: '/add',
+                    templateUrl: 'modules/users/add/add.users.template.html',
+                    controller: "addUsersCtrl",
+                    resolve: {
+                        addUsers: function($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                name: 'addUsersModule',
+                                files: ['modules/users/add/add.users.module.js']
                             })
                         }
                     }

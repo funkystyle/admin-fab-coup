@@ -9,7 +9,7 @@ describe('Security concerns', function() {
     logSpy = spyOn($log, 'warn');
   }));
 
-  it('should not call the $log service when ngSanitize is present', function() {
+  it('should not call the $log services when ngSanitize is present', function() {
     highlightFilter('before <script src="">match</script> after', 'match');
     expect(logSpy).not.toHaveBeenCalled();
   });

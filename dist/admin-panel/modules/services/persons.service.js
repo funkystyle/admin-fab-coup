@@ -1,0 +1,1 @@
+angular.module("personFactoryModule",["constantModule"]).factory("personFactory",["$http","mainURL","URL","$q",function(o,e,n,t){return{getAll:function(){var r=t.defer();return o({url:e+n.persons,headers:{authorization:"917a3851-72fe-416e-b5bd-8bae01d25e1c"},method:"GET"}).then(function(o){console.log(o)},function(o){console.log(o)}),r.promise}}}]);

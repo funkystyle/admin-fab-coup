@@ -8,14 +8,18 @@ angular.module("registerModule", ["ui.select", "Directives", "satellizer", "ui.b
             status: "inactive",
             last_modified_by: ['1']
         };
-        $scope.userLevels = [{
-                level: "submitter"
+        $scope.userLevels = [
+            {
+                level: "submitter",
+                text: "Submitter"
             },
             {
-                level: "editor"
+                level: "editor",
+                text: "Editor"
             },
             {
-                level: "admin"
+                level: "admin",
+                text: "Admin"
             }
         ];
 

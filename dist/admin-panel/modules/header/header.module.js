@@ -1,1 +1,1 @@
-angular.module("headerModule",[]).controller("headerCtrl",["$scope","$state",function(e,t){e.state=t}]);
+angular.module("headerModule",["constantModule","satellizer","toastr"]).controller("headerCtrl",["$scope","$state","mainURL","URL","$state","$auth","$http","toastr",function(o,t,e,l,t,r,n,u){o.state=t,o.logout=function(){r.isAuthenticated()&&n({url:e+l.logout,method:"GET"}).then(function(o){console.log(o),r.logout(),u.success("Successfully Logged out!","Hey!"),t.go("login")},function(o){console.log(o),u.error(o.data.error,"Error")})}}]);

@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="modules/header/header.css" />
+<link rel="stylesheet" href="bower_components/font-awesome-4.7.0/css/font-awesome.min.css" />
+
 <div id="throbber" style="display:none; min-height:120px;"></div>
 <div id="noty-holder"></div>
 <div id="wrapper">
@@ -18,13 +20,10 @@
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
-            <li><a href="#" data-placement="bottom" data-toggle="tooltip" href="" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
-            </a>
-            </li>
             <li class="dropdown">
                 <a href="" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href=""><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                    <li><a ui-sref="header.settings.profile"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
                     <li><a ui-sref="header.settings.profile"><i class="fa fa-fw fa-cog"></i> Settings</a></li>
                     <li class="divider"></li>
                     <li><a ui-sref="login"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
@@ -65,6 +64,7 @@
                         <li ng-class="{active: state.includes('header.add-store')}"><a href="#/store/add">Add Store<i class="fa fa-angle-right pull-right"></i></a></li>
                     </ul>
                 </li>
+                <li ng-class="{'active sidebar-li': state.includes('header.users.all') || state.includes('header.users.add')}"><a ui-sref="header.users.all" style="background-color: transparent;">Users</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
