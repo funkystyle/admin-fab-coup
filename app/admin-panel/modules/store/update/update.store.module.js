@@ -1,4 +1,4 @@
-angular.module("updateStoreModule", ["ui.select", "ngSanitize", "ui.bootstrap"])
+angular.module("updateStoreModule", ["ui.select", "ngSanitize", "ui.bootstrap", "ngImgCrop"])
     .controller("updateStoreCtrl", ["$scope", "$timeout", "$stateParams", function ($scope, $timeout, $stateParams) {
         $scope.store = {
             created_date: new Date(),
@@ -37,6 +37,53 @@ angular.module("updateStoreModule", ["ui.select", "ngSanitize", "ui.bootstrap"])
             { name: 'Michael',   email: 'michael@email.com',   age: 15, country: 'Colombia' },
             { name: 'Nicolás',   email: 'nicolas@email.com',    age: 43, country: 'Colombia' }
         ];
+        // ng image crop js start store image
+        $scope.storeImage='';
+        $scope.myCroppedImage='';
+
+        var handleFileSelect=function(evt) {
+          var file=evt.currentTarget.files[0];
+          var reader = new FileReader();
+          reader.onload = function (evt) {
+            $scope.$apply(function($scope){
+              $scope.storeImage=evt.target.result;
+            });
+          };
+          reader.readAsDataURL(file);
+        };
+        angular.element(document.querySelector('#store_image')).on('change',handleFileSelect);
+
+        // ng image crop js start side_banner image
+        $scope.sideBanner='';
+        $scope.myCroppedImage='';
+
+        var handleFileSelect=function(evt) {
+          var file=evt.currentTarget.files[0];
+          var reader = new FileReader();
+          reader.onload = function (evt) {
+            $scope.$apply(function($scope){
+              $scope.sideBanner=evt.target.result;
+            });
+          };
+          reader.readAsDataURL(file);
+        };
+        angular.element(document.querySelector('#side_banner')).on('change',handleFileSelect);
+
+        // ng image crop js start top banner image
+        $scope.topBanner='';
+        $scope.myCroppedImage='';
+
+        var handleFileSelect=function(evt) {
+          var file=evt.currentTarget.files[0];
+          var reader = new FileReader();
+          reader.onload = function (evt) {
+            $scope.$apply(function($scope){
+              $scope.topBanner=evt.target.result;
+            });
+          };
+          reader.readAsDataURL(file);
+        };
+        angular.element(document.querySelector('#top_banner')).on('change',handleFileSelect);
     }])
     .filter('propsFilter', function() {
         return function(items, props) {

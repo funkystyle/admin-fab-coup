@@ -37,7 +37,8 @@
                     </div>
                     <div class="form-group">
                         <label for="deal_images">Images</label>
-                        <input type="file" id="deal_images" ng-model="deal.images">
+                        <input type="file" id="deal_images" ng-model="deal.images" multiple="multiple">
+                        <div id="dealimage" class="image-multi"></div>
                         <p class="help-block">Example block-level help text here.</p>
                     </div>
                     <div class="form-group">
@@ -168,7 +169,8 @@
                     </div>
                     <div class="form-group">
                         <label for="top_banner">Top Banner</label>
-                        <input type="file" id="top_banner" ng-model="deal.top_banner">
+                        <input type="file" id="top_banner" ng-model="deal.top_banner" multiple="multiple">
+                        <div id="topbanner" class="image-multi"></div>
                         <p class="help-block">Example block-level help text here.</p>
                     </div>
                     <div class="form-group">
@@ -191,7 +193,8 @@
                     </div>
                     <div class="form-group">
                         <label for="top_banner">Side Banner</label>
-                        <input type="file" id="side_banner" ng-model="deal.side_banner">
+                        <input type="file" id="side_banner" ng-model="deal.side_banner" multiple="multiple">
+                        <div id="sideBanner" class="image-multi"></div>
                         <p class="help-block">Example block-level help text here.</p>
                     </div>
                 </div> <!-- end col -->
