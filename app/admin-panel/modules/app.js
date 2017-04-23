@@ -80,6 +80,11 @@ angular.module("ADMIN", ['ui.router', 'oc.lazyLoad'])
                     {
                         name: "personFactoryModule",
                         files: ['modules/services/persons.service.js']
+                    },
+                    // ng image crop
+                    {
+                        name: "ngImgCrop",
+                        files: ['bower_components/angular-imagecrop/ng-img-crop.js']
                     }
                 ]
             });

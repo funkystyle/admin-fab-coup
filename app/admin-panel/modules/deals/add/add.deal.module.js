@@ -1,4 +1,4 @@
-angular.module("addDealModule", ["ui.select", "ngSanitize", "ui.bootstrap", "toastr"])
+angular.module("addDealModule", ["ui.select", "ngSanitize", "ui.bootstrap", "toastr", "ngImgCrop"])
     .controller("addDealCtrl", ["$scope", function ($scope) {
         $scope.store = {
             created_date: new Date(),
@@ -41,6 +41,99 @@ angular.module("addDealModule", ["ui.select", "ngSanitize", "ui.bootstrap", "toa
             { name: 'Michael',   email: 'michael@email.com',   age: 15, country: 'Colombia' },
             { name: 'Nicolás',   email: 'nicolas@email.com',    age: 43, country: 'Colombia' }
         ];
+        // ng image crop js start deal_images
+        var fileUpload = document.getElementById("deal_images");
+        fileUpload.onchange = function () {
+            if (typeof (FileReader) != "undefined") {
+                var dvPreview = document.getElementById("dealimage");
+                dvPreview.innerHTML = "";
+                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                for (var i = 0; i < fileUpload.files.length; i++) {
+                    var file = fileUpload.files[i];
+                    if (regex.test(file.name.toLowerCase())) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            var img = document.createElement("IMG");
+                            img.height = "100";
+                            img.width = "100";
+                            img.src = e.target.result;
+                            // console.log("image", img.src)
+                            dvPreview.appendChild(img);
+                        }
+                        reader.readAsDataURL(file);
+                    } else {
+                        alert(file.name + " is not a valid image file.");
+                        dvPreview.innerHTML = "";
+                        return false;
+                    }
+                }
+            } else {
+                alert("This browser does not support HTML5 FileReader.");
+            }
+        }
+
+        // ng image crop js start side_banner image
+
+        var sidebanner = document.getElementById("side_banner");
+        sidebanner.onchange = function () {
+            if (typeof (FileReader) != "undefined") {
+                var dvPreview = document.getElementById("sideBanner");
+                dvPreview.innerHTML = "";
+                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                for (var i = 0; i < sidebanner.files.length; i++) {
+                    var file = sidebanner.files[i];
+                    if (regex.test(file.name.toLowerCase())) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            var img = document.createElement("IMG");
+                            img.height = "100";
+                            img.width = "100";
+                            img.src = e.target.result;
+                            // console.log("image", img.src)
+                            dvPreview.appendChild(img);
+                        }
+                        reader.readAsDataURL(file);
+                    } else {
+                        alert(file.name + " is not a valid image file.");
+                        dvPreview.innerHTML = "";
+                        return false;
+                    }
+                }
+            } else {
+                alert("This browser does not support HTML5 FileReader.");
+            }
+        }
+
+        // ng image crop js start top banner image
+        var topbanner = document.getElementById("top_banner");
+        topbanner.onchange = function () {
+            if (typeof (FileReader) != "undefined") {
+                var dvPreview = document.getElementById("topbanner");
+                dvPreview.innerHTML = "";
+                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                for (var i = 0; i < topbanner.files.length; i++) {
+                    var file = topbanner.files[i];
+                    if (regex.test(file.name.toLowerCase())) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            var img = document.createElement("IMG");
+                            img.height = "100";
+                            img.width = "100";
+                            img.src = e.target.result;
+                            // console.log("image", img.src)
+                            dvPreview.appendChild(img);
+                        }
+                        reader.readAsDataURL(file);
+                    } else {
+                        alert(file.name + " is not a valid image file.");
+                        dvPreview.innerHTML = "";
+                        return false;
+                    }
+                }
+            } else {
+                alert("This browser does not support HTML5 FileReader.");
+            }
+        }
     }])
     .filter('propsFilter', function() {
         return function(items, props) {

@@ -28,6 +28,7 @@
                     <div class="form-group">
                         <label for="store_image">Store Image</label>
                         <input type="file" id="store_image" ng-model="store.store_image">
+                        <div class="image-full"><img ng-src="{{storeImage}}" /></div>
                         <p class="help-block">Example block-level help text here.</p>
                     </div>
                     <div class="form-group">
@@ -99,11 +100,13 @@
                     <div class="form-group">
                         <label for="side_banner">Side Banner</label>
                         <input type="file" id="side_banner" ng-model="store.side_banner">
+                        <div class="image-full"><img ng-src="{{sideBanner}}" /></div>
                         <p class="help-block">Example block-level help text here.</p>
                     </div>
                     <div class="form-group">
                         <label for="top_banner">Top Banner</label>
                         <input type="file" id="top_banner" ng-model="store.top_banner">
+                        <div class="image-full"><img ng-src="{{topBanner}}" /></div>
                         <p class="help-block">Example block-level help text here.</p>
                     </div>
                     <div class="form-group">

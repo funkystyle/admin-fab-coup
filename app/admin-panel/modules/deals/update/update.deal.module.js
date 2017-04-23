@@ -1,5 +1,5 @@
 /* store module */
-angular.module("updateDealModule", ["ui.select", "ngSanitize", "ui.bootstrap", "toastr"])
+angular.module("updateDealModule", ["ui.select", "ngSanitize", "ui.bootstrap", "toastr", "ngImgCrop"])
     .controller("updateDealCtrl", ["$scope", function ($scope) {
         $scope.currentPage = 1;
         $scope.pageSize = 10;
@@ -26,6 +26,53 @@ angular.module("updateDealModule", ["ui.select", "ngSanitize", "ui.bootstrap", "
         $scope.pageChangeHandler = function(num) {
             console.log('drinks page changed to ' + num);
         };
+        // ng image crop js start deal_images
+        $scope.Dealimage='';
+        $scope.myCroppedImage='';
+
+        var handleFileSelect=function(evt) {
+          var file=evt.currentTarget.files[0];
+          var reader = new FileReader();
+          reader.onload = function (evt) {
+            $scope.$apply(function($scope){
+              $scope.Dealimage=evt.target.result;
+            });
+          };
+          reader.readAsDataURL(file);
+        };
+        angular.element(document.querySelector('#deal_images')).on('change',handleFileSelect);
+
+        // ng image crop js start side_banner image
+        $scope.sideBanner='';
+        $scope.myCroppedImage='';
+
+        var handleFileSelect=function(evt) {
+          var file=evt.currentTarget.files[0];
+          var reader = new FileReader();
+          reader.onload = function (evt) {
+            $scope.$apply(function($scope){
+              $scope.sideBanner=evt.target.result;
+            });
+          };
+          reader.readAsDataURL(file);
+        };
+        angular.element(document.querySelector('#side_banner')).on('change',handleFileSelect);
+
+        // ng image crop js start top banner image
+        $scope.topBanner='';
+        $scope.myCroppedImage='';
+
+        var handleFileSelect=function(evt) {
+          var file=evt.currentTarget.files[0];
+          var reader = new FileReader();
+          reader.onload = function (evt) {
+            $scope.$apply(function($scope){
+              $scope.topBanner=evt.target.result;
+            });
+          };
+          reader.readAsDataURL(file);
+        };
+        angular.element(document.querySelector('#top_banner')).on('change',handleFileSelect);
     }])
     .filter('propsFilter', function() {
         return function(items, props) {
